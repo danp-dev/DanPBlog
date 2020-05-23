@@ -3,12 +3,12 @@ module.exports = {
     title: `Dan P </Dev>`,
     author: {
       name: `Dan P`,
-      summary: `Building cool Blockchain Dapps.`,
+      summary: `Building Awesom Blockchain Dapps.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Dan's Personal Blog and Portfolio`,
+    siteUrl: `https://danp.dev`,
     social: {
-      twitter: `_blockchaindude`,
+      twitter: `danpdev`,
     },
   },
     plugins: [
@@ -24,6 +24,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: `images`,
       },
     },
     {

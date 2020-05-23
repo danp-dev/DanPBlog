@@ -1,35 +1,30 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import LayoutStyles from "./header.module.scss"
-
+import Image from "gatsby-image"
+import logo from "../images/DanPDev-Logo.png"
 
 const TitleHeader = () => {
-  const x = 1;
-const data = useStaticQuery(graphql`
-query {    
-site {
+ const data = useStaticQuery(graphql`
+  query {
+    site {
       siteMetadata {
         title
       }
     }
   }
-` )
+  `)
 
   return (
-      <div className={LayoutStyles.header}>
-        <h1>      
+      <div className={LayoutStyles.header}> 
+        <div className={LayoutStyles.logo}>
+        
         <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
           to={`/`}
         >
-         {data.site.siteMetadata.title}
-          
+        <img src={logo}></img>
         </Link>
-      </h1>
-      
+        </div>
      
 
 
@@ -46,3 +41,5 @@ site {
         }
     
 export default TitleHeader
+
+

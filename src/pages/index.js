@@ -1,11 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import profilePic from "../images/Dan-Profile-Pic.jpg"
-import sassLogo from "../images/sass-logo.png"
-import gatsbyLogo from "../images/gatsby-logo.png"
-import jsLogo from "../images/js-logo.png"
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -19,9 +14,19 @@ const BlogIndex = ({data}) => {
     
       <SEO title="All posts" />
       <div className={LayoutStyles.hero}> 
-      <img className={LayoutStyles.bioImage} src={profilePic} ></img>
-      
-      <h1>Dan P.</h1>
+      <Image
+        fixed={data.danpic.childImageSharp.fixed}
+        alt={"Picture Of Dan P at his computer - A Web and Blockchain Developer"}
+        style={{
+          marginBottom: 0,
+          minWidth: 50,
+          borderRadius: `100%`,
+        }}
+        imgStyle={{
+          borderRadius: `50%`,
+        }}
+      />
+           <h1>Dan P.</h1>
       <h3>Building awesome Dapps and websites.</h3>
    </div>
         <div className={LayoutStyles.twoCols}>
@@ -46,10 +51,7 @@ const BlogIndex = ({data}) => {
       <div className={LayoutStyles.techUsedScrollContainer}>
         <div className={LayoutStyles.container}>
         <div><h2>Tech I Love use.</h2></div>
-        <div ><img src={sassLogo}></img>
-        <img src={jsLogo}></img>
-        <img src={gatsbyLogo}></img>
-        <img src={sassLogo}></img>
+        <div>
       </div>
       </div>
       </div>
@@ -104,5 +106,37 @@ export const pageQuery = graphql`
         }
       }
     }
+    danpic: file(relativePath: {eq: "Dan-Profile-Pic.jpg"}) {
+        id
+        childImageSharp {
+          fixed(width: 200, height: 200) {
+                ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    sasspic: file(relativePath: {eq: "DanPDev-Sass-Logo.png"}) {
+      id
+      childImageSharp {
+        fixed(width: 200, height: 200) {
+              ...GatsbyImageSharpFixed
+      }
+    }
   }
+  jspic: file(relativePath: {eq: "Dan-Profile-Pic.jpg"}) {
+    id
+    childImageSharp {
+      fixed(width: 200, height: 200) {
+            ...GatsbyImageSharpFixed
+    }
+  }
+}
+reactpic: file(relativePath: {eq: "Dan-Profile-Pic.jpg"}) {
+  id
+  childImageSharp {
+    fixed(width: 200, height: 200) {
+          ...GatsbyImageSharpFixed
+  }
+}
+}
+}
  `

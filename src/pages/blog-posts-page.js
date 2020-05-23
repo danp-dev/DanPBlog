@@ -1,8 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import profilePic from "../images/profile-pic-new.jpg"
-import sassLogo from "../images/sass-logo.png"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
