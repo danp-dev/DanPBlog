@@ -4,6 +4,10 @@ import Image from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTwitterSquare , faGithubSquare } from "@fortawesome/free-brands-svg-icons"
+
 import LayoutStyles from "../pages/index.module.scss"
 
 const BlogIndex = ({data}) => {
@@ -36,15 +40,14 @@ const BlogIndex = ({data}) => {
         </div>
         <div className={LayoutStyles.twoEvenCols}>
           <h3>Contact</h3>
-        <a href="https://twitter.com/_blockchaindude" target="_blank">
-          <li>Twitter</li>
+          <div className={LayoutStyles.socialicons}>
+        <a href="https://twitter.com/danpdev" target="_blank">
+          <FontAwesomeIcon icon={faTwitterSquare} />
         </a>
-        <a href="https://twitter.com/_blockchaindude" target="_blank">
-          <li>Twitter</li>
+        <a href="https://github.com/danp-dev" target="_blank">
+        <FontAwesomeIcon icon={faGithubSquare} />
         </a>
-        <a href="https://twitter.com/_blockchaindude" target="_blank">
-          <li>Twitter</li>
-        </a>
+        </div>
         </div>
       </div>
       
@@ -52,6 +55,9 @@ const BlogIndex = ({data}) => {
         <div className={LayoutStyles.container}>
         <div><h2>Tech I Love use.</h2></div>
         <div>
+<Image fixed={data.jspic.childImageSharp.fixed} />
+<Image fixed={data.sasspic.childImageSharp.fixed} />
+<Image fixed={data.reactpic.childImageSharp.fixed} />
       </div>
       </div>
       </div>
@@ -122,7 +128,7 @@ export const pageQuery = graphql`
       }
     }
   }
-  jspic: file(relativePath: {eq: "Dan-Profile-Pic.jpg"}) {
+  jspic: file(relativePath: {eq: "DanPDev-JS-Logo.png"}) {
     id
     childImageSharp {
       fixed(width: 200, height: 200) {
@@ -130,7 +136,7 @@ export const pageQuery = graphql`
     }
   }
 }
-reactpic: file(relativePath: {eq: "Dan-Profile-Pic.jpg"}) {
+reactpic: file(relativePath: {eq: "DanPDev-React-Logo.png"}) {
   id
   childImageSharp {
     fixed(width: 200, height: 200) {

@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://danp.dev`,
     social: {
       twitter: `danpdev`,
+      github: 'danp-dev',
     },
   },
     plugins: [
