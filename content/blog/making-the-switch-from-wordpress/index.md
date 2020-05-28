@@ -2,6 +2,7 @@
 title: Making The Switch From Wordpress To The JamSTACK!
 date: "2020-05-01T22:12:03.284Z"
 description: "A post about how I went from Wordpress developer to JamSTACK developer"
+featuredimage: "./salty_egg.jpg"
 ---
 
 This is my first post on my new fake blog! How exciting!

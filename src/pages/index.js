@@ -25,6 +25,7 @@ const BlogIndex = ({data}) => {
           marginBottom: 0,
           minWidth: 50,
           borderRadius: `100%`,
+          
         }}
         imgStyle={{
           borderRadius: `50%`,
@@ -53,11 +54,26 @@ const BlogIndex = ({data}) => {
       
       <div className={LayoutStyles.techUsedScrollContainer}>
         <div className={LayoutStyles.container}>
-        <div><h2>Tech I Love use.</h2></div>
+        <div><h2>Tech I Use.</h2></div>
+        <div className={LayoutStyles.techUsedScrollImages}>
+        <Image fixed={data.jspic.childImageSharp.fixed} style={{margin:'1rem'}}/>
+<Image fixed={data.sasspic.childImageSharp.fixed} style={{margin:'1rem'}}/>
+<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}}/>
+      </div>
+      <div>
+      
+      </div>
+
+      </div>
+      <div className={LayoutStyles.container}>
+        <div><h2>Hardware I Use</h2></div>
         <div>
-<Image fixed={data.jspic.childImageSharp.fixed} />
-<Image fixed={data.sasspic.childImageSharp.fixed} />
-<Image fixed={data.reactpic.childImageSharp.fixed} />
+<Image fixed={data.jspic.childImageSharp.fixed} style={{margin:'1rem'}} />
+<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
+<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
+<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
+<Image fixed={data.sasspic.childImageSharp.fixed} style={{margin:'1rem'}} />
+<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
       </div>
       </div>
       </div>
@@ -69,7 +85,7 @@ const BlogIndex = ({data}) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields.slug} className={LayoutStyles.articles}>
             <header>
               <h3>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -115,7 +131,7 @@ export const pageQuery = graphql`
     danpic: file(relativePath: {eq: "Dan-Profile-Pic.jpg"}) {
         id
         childImageSharp {
-          fixed(width: 200, height: 200) {
+          fixed(width: 200 , height: 200) {
                 ...GatsbyImageSharpFixed
         }
       }
@@ -131,7 +147,7 @@ export const pageQuery = graphql`
   jspic: file(relativePath: {eq: "DanPDev-JS-Logo.png"}) {
     id
     childImageSharp {
-      fixed(width: 200, height: 200) {
+      fixed(width: 200 , height: 200) {
             ...GatsbyImageSharpFixed
     }
   }

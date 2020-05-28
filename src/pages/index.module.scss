@@ -33,7 +33,6 @@ min-height:250px;
     img {
       margin-left:1rem;
       margin-right:1rem;
-      max-width:150px;
     }
 
   }
@@ -110,5 +109,18 @@ min-height:250px;
     a {
   font-size:2rem;
   padding: 0.5rem;
+  color:#2E2E2E
 }
+  }
+
+.articles {
+    background-color: #F1F1EF;
+    padding: 5px 10px 5px 10px;
+    margin:5px;
+    color:#2e2e2e2e;
+    
+    a {
+      text-decoration: none;
+    }
+    
   }

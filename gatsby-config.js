@@ -7,7 +7,7 @@ module.exports = {
     },
     description: `Dan's Personal Blog and Portfolio`,
     siteUrl: `https://danp.dev`,
-    social: {
+        social: {
       twitter: `danpdev`,
       github: 'danp-dev',
     },

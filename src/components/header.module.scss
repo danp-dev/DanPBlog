@@ -1,6 +1,9 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    margin:0px
+    margin:0px;
+    display: flex ;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .header {
@@ -64,6 +67,10 @@ body {
 }
 }
 
+.mobilemenu {
+    display:none;
+    
+}
 // Media Queries
 
 /* Large desktop */
@@ -73,7 +80,18 @@ body {
 @media (min-width: 768px) and (max-width: 979px) {  }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) {.header {nav {display: none;}} }
+@media (max-width: 767px) {
+    .header {
+        nav {
+            display: none;
+        }
+    .mobilemenu {
+        display:flex;
+        align-items: center;
+        font-size:2rem;
+    }
+    }
+ }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {}

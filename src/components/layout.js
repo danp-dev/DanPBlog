@@ -14,12 +14,7 @@ const Layout = ({ children }) => (
     <div className={LayoutStyles.container}>
       
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built By Dan.P with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-      </div>
+       </div>
       <Footer />
     </div>
   )
