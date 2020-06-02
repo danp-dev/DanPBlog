@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -70,10 +70,7 @@ const BlogIndex = ({data}) => {
         <div>
 <Image fixed={data.jspic.childImageSharp.fixed} style={{margin:'1rem'}} />
 <Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
-<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
-<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
-<Image fixed={data.sasspic.childImageSharp.fixed} style={{margin:'1rem'}} />
-<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
+
       </div>
       </div>
       </div>

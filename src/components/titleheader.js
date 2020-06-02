@@ -1,12 +1,10 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import LayoutStyles from "./header.module.scss"
-import Image from "gatsby-image"
 import logo from "../images/DanPDev-Logo.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBitcoin } from "@fortawesome/free-brands-svg-icons"
-import { render } from "node-sass"
 
 
 
@@ -21,7 +19,6 @@ const TitleHeader = () => {
   }
   `)
 
-  render()
  
   return (
       <div className={LayoutStyles.header}> 
@@ -49,8 +46,6 @@ const TitleHeader = () => {
       <div className={LayoutStyles.mobilemenu} >
        <FontAwesomeIcon icon={faBitcoin} />
       </div>
-      
-
       </div>
     )
   

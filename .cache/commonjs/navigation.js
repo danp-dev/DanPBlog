@@ -42,9 +42,7 @@ function maybeRedirect(pathname) {
 
   if (redirect != null) {
     if (process.env.NODE_ENV !== `production`) {
-      const pageResources = _loader.default.loadPageSync(pathname);
-
-      if (pageResources != null) {
+      if (!_loader.default.isPageNotFound(pathname)) {
         console.error(`The route "${pathname}" matches both a page and a redirect; this is probably not intentional.`);
       }
     }
@@ -223,10 +221,13 @@ class RouteAnnouncer extends _react.default.Component {
       }
 
       const newAnnouncement = `Navigated to ${pageName}`;
-      const oldAnnouncement = this.announcementRef.current.innerText;
 
-      if (oldAnnouncement !== newAnnouncement) {
-        this.announcementRef.current.innerText = newAnnouncement;
+      if (this.announcementRef.current) {
+        const oldAnnouncement = this.announcementRef.current.innerText;
+
+        if (oldAnnouncement !== newAnnouncement) {
+          this.announcementRef.current.innerText = newAnnouncement;
+        }
       }
     });
   }
