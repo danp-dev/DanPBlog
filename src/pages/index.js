@@ -68,8 +68,10 @@ const BlogIndex = ({data}) => {
       <div className={LayoutStyles.container}>
         <div><h2>Hardware I Use</h2></div>
         <div>
-<Image fixed={data.jspic.childImageSharp.fixed} style={{margin:'1rem'}} />
-<Image fixed={data.reactpic.childImageSharp.fixed} style={{margin:'1rem'}} />
+
+<Image fixed={data.reactpic.childImageSharp.fixed}/>
+<Image fixed={data.sasspic.childImageSharp.fixed}/>
+<Image fixed={data.reactpic.childImageSharp.fixed}/>
 
       </div>
       </div>

@@ -81,7 +81,7 @@ body {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-    .header {
+    /*.header {
         nav {
             display: none;
         }
@@ -91,7 +91,20 @@ body {
         font-size:2rem;
     }
     }
- }
+ } */
+ .header {
+     flex-direction: column;
+    display: block;
+        nav {
+            display:block;
+        }
+
+        
+    } 
+.logo {
+    justify-content: space-around;
+}
+}
 
 /* Landscape phones and down */
 @media (max-width: 480px) {}
