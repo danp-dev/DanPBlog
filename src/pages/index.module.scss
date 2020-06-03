@@ -46,9 +46,6 @@ min-height:250px;
     
 }
 
-//.techUsedImages {
-//  max-width:150px;
-//}
 .container {
     margin: 0 auto;
     max-width: 1120px;
@@ -110,6 +107,7 @@ min-height:250px;
   }
 
 .articles {
+  display:flex;
     background-color: #F1F1EF;
     padding: 5px 10px 5px 10px;
     margin:5px;
@@ -119,4 +117,8 @@ min-height:250px;
       text-decoration: none;
     }
     
+  }
+
+  .articlestack {
+    margin-left: 0.5rem;
   }

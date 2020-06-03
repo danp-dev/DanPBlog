@@ -85,7 +85,8 @@ const BlogIndex = ({data}) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug} className={LayoutStyles.articles}>
-            <header>
+            <Image fixed={node.frontmatter.featuredimage.childImageSharp.fixed} />
+            <div className={LayoutStyles.articlestack}><header>
               <h3>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
@@ -100,6 +101,7 @@ const BlogIndex = ({data}) => {
                 }}
               />
             </section>
+          </div>
           </article>
         )
       })}
@@ -123,6 +125,14 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            featuredimage {
+              id
+              childImageSharp {
+                fixed(width: 250){
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }

@@ -1,6 +1,8 @@
 ---
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
+description: "A post about how I went from Wordpress developer to JamSTACK developer. This is one of my biggest switches, I will explain how and why I made the change."
+featuredimage: "./salty_egg.jpg"
 ---
 
 Wow! I love blogging so much already.
