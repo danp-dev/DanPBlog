@@ -35,7 +35,7 @@ const TitleHeader = () => {
 
       <nav>
 
-          <ul style={{listStyle:`none`, display:`flex`,justifyContent:`space-around`}}>
+          <ul style={{listStyle:`none`, display:`flex`,justifyContent:`space-around`, padding:'0px'}}>
             <Link to="/blog-posts-page"><li>Blog</li></Link>
             <Link to="404"><li>About</li></Link>
             <Link to="404"><li>Contact</li></Link>
